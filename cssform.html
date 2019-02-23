@@ -5,19 +5,26 @@
         <style>
             form{
                 width: 500px;
-                background-color: pink;
+                background-color:none;
                 padding: 20px;
                 margin: 0 auto;
                 border: 2px solid black;
             }
-            input[type="text"],input[type="password"]{
+            input[type="text"],input[type="password"],select{
                 width: 300px;
                 height:20px;
-                border: 1px solid red;
+                border-bottom: 1px silver solid;
+                outline: none;
+                background: #f1f1f1; 
+                
                 }
             textarea{
                 resize: none;
-                border: 1px solid red;
+                background: white;
+                border-bottom: 1px silver solid;
+                outline: none;
+                background: #f1f1f1; 
+               
             }
            input[type='submit']{
                color: red;
@@ -28,6 +35,17 @@
                height: 20px;
                
 
+           }
+           input[type="submit"]:hover{
+               background-color: lightblue; 
+           }
+           input[type="text"]:focus , input[type="password"]:focus,textarea:focus{
+                background-color: rgb(247, 72, 232);
+                
+           }
+
+           input[type="text"]:hover , input[type="password"]:hover,select:hover,textarea:hover {
+               background-color: lightblue;
            }
         </style>
     </head>
@@ -41,16 +59,16 @@
                     </tr>
                     <tr>
                         <td><label for="pass">Password</label></td>
-                        <td><input type="password" id="pass" name="pass"></td>
+                        <td><input type="password" id="pass" name="pass"><br></td>
                     </tr>
                         <tr>
                             <td><label>Gender</label></td>
-                            <td>Male: <input name="Gender" type="radio" value="male"> | Female<input name="Gender" type="radio" value="female"></td>
+                            <td>Male: <input name="Gender" type="radio" value="male"><br>Female<input name="Gender" type="radio" value="female"><br><br></td>
                             
                         </tr>
                         <tr>
                                 <td><label>SKills</label></td>
-                                <td>HTML: <input type="checkbox" name="html" value="html"> | CSS<input type="checkbox" name="css" value="css">| PHP <input type="checkbox" name="php "  value="php"></td>
+                                <td>HTML: <input type="checkbox" name="html" value="html"><br>CSS<input type="checkbox" name="css" value="css"><br>PHP <input type="checkbox" name="php "  value="php"><br><br></td>
                                 
                         </tr>
                         <tr>
@@ -70,7 +88,7 @@
                         </tr>
                         <tr>
                             <td><lable for="comments">comments</lable></td>
-                            <td><textarea rows="10" cols="30"></textarea></td>
+                            <td><textarea rows="10" cols="40"></textarea></td>
                         </tr>
                         <tr>
                             <td>
